@@ -32,10 +32,10 @@ jobs:
       - name: Executing Scripts
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '18.13.0'
           
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
